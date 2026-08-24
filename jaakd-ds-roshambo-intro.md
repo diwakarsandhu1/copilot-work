@@ -1,5 +1,5 @@
 ---
-layout: inspired
+layout: index
 title: "Rock Paper Scissors: Intro Mode"
 heading: "Fun Rock Paper Scissors Game in JavaScript"
 subheading: "Intro Level Game"
