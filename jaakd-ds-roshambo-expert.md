@@ -24,13 +24,13 @@ games = JSON.parse(localStorage.getItem('games')) || [];
     playRoshambo = function(clientGesture){
         serverGesture = 'scissors';
         if (clientGesture=='rock') {
-            result = "tie";
-        }
-        if (clientGesture=='paper') {
             result = "win";
         }
+        if (clientGesture=='paper') {
+            result = "loss";
+        }
         if (clientGesture=='scissors') {
-            result = "lose";
+            result = "tie";
         }
         document.getElementById('results').innerHTML = result;
         saveGame(clientGesture, serverGesture, result);
@@ -53,7 +53,7 @@ games = JSON.parse(localStorage.getItem('games')) || [];
         localStorage.setItem('games', JSON.stringify(games));
         showHistory();
     }
-    
+
     showHistory = function() {
         historyText = "";
         for (game of games) {
